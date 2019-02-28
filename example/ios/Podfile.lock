@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - gt3 (0.0.1):
+    - Flutter
+    - GT3Captcha
+  - GT3Captcha (0.1.3)
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - gt3 (from `.symlinks/plugins/gt3/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GT3Captcha
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  gt3:
+    :path: ".symlinks/plugins/gt3/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  gt3: d3bbbcc454c950f163763ee072508766b4d34865
+  GT3Captcha: c4977b01a99691726f544955ae04b71a6bd27e60
+
+PODFILE CHECKSUM: aff02bfeed411c636180d6812254b2daeea14d09
+
+COCOAPODS: 1.5.3
