@@ -1,8 +1,8 @@
 name: gt3
 description: A new Flutter plugin.
-version: 0.0.1
+version: 0.0.2
 author: tang <1061352149@qq.com>
-homepage:
+homepage: https://github.com/tangxiafeng/gt3.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
