@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await Gt3.showGeeTest;
+      platformVersion = await Gt3.showGeeTest('http://192.168.50.94/base/captcha');
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

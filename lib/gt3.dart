@@ -11,7 +11,10 @@ class Gt3 {
     return version;
   }
 
-  static Future<String> get showGeeTest async {
-    return await _channel.invokeMethod('showGeeTest');
+  static Future<String> showGeeTest(String url) async {
+    final Map<String, dynamic> params = <String, dynamic>{
+      'key': url,
+    };
+    return await _channel.invokeMethod('showGeeTest', params);
   }
 }

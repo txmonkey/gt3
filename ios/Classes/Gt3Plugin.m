@@ -4,9 +4,9 @@
 
 
 //网站主部署的用于验证注册的接口 (api_1)
-#define api_1 @"https://accounts.microduino.cn/base/captcha"
+//#define api_1 @"https://www.geetest.com/demo/gt/validate-slide"
 //网站主部署的二次验证的接口 (api_2)
-#define api_2 @"https://accounts.microduino.cn/base/captcha"
+//#define api_2 @"https://www.geetest.com/demo/gt/validate-slide"
 
 @interface Gt3Plugin () <GT3CaptchaManagerDelegate>
 
@@ -16,8 +16,10 @@
 @property (nonatomic, strong) GT3CaptchaManager *manager;
 
 @end
-
-@implementation Gt3Plugin
+@implementation Gt3Plugin{
+    NSString *api_1;
+    NSString *api_2;
+}
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"gt3"
@@ -31,7 +33,9 @@
     result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
   } else if ([@"showGeeTest" isEqualToString:call.method]) {
     self.result = result;
-    NSLog(@"123");
+    NSDictionary *arguments = [call arguments];
+    api_1 = arguments[@"key"];
+    api_2 = arguments[@"key"];
     [self.manager registerCaptcha:nil];
     [self.manager startGTCaptchaWithAnimated:FALSE];
     [self.captchaButton startCaptcha];

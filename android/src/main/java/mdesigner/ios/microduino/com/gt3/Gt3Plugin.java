@@ -37,11 +37,11 @@ public class Gt3Plugin implements MethodCallHandler {
     /**
      * api1，需替换成自己的服务器URL
      */
-    private static final String captchaURL = "http://192.168.50.94/base/captcha";
+    private String captchaURL ;
     /**
      * api2，需替换成自己的服务器URL
      */
-    private static final String validateURL = "http://192.168.50.94/base/captcha";
+    private String validateURL;
     private GT3GeetestUtils gt3GeetestUtils;
     private GT3ConfigBean gt3ConfigBean;
     private String resultStr;
@@ -68,6 +68,8 @@ public class Gt3Plugin implements MethodCallHandler {
             result.success("Android " + android.os.Build.VERSION.RELEASE);
         } else if (call.method.equals("showGeeTest")) {
             GTresult = result;
+            captchaURL = call.argument("key");
+            validateURL = call.argument("key");
             customVerity();
         } else {
             result.notImplemented();
