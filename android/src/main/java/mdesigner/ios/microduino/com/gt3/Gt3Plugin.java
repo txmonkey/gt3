@@ -132,7 +132,7 @@ public class Gt3Plugin implements MethodCallHandler {
                         String geetest_challenge = jsonObject.getString("geetest_challenge");
                         String geetest_seccode = jsonObject.getString("geetest_seccode");
                         String geetest_validate = jsonObject.getString("geetest_validate");
-                        resultStr = "geetest_challenge=" + geetest_challenge + "&geetest_seccode=" + geetest_seccode + "&geetest_validate" + geetest_validate;
+                        resultStr = "geetest_challenge=" + geetest_challenge + "&geetest_seccode=" + geetest_seccode + "&geetest_validate=" + geetest_validate;
                     } catch (Exception e) {
 
                     }
