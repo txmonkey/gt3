@@ -39,6 +39,7 @@
     [self.manager registerCaptcha:nil];
     [self.manager startGTCaptchaWithAnimated:FALSE];
     [self.captchaButton startCaptcha];
+    [self.captchaButton startCaptcha];
   } else {
     result(FlutterMethodNotImplemented);
   }
